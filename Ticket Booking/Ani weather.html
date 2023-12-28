@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Concert Ticket Booking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(band);
+            height: 100%; 
+			background-position: center;
+ 			background-repeat: no-repeat;
+ 			background-size: cover;
+            color: goldenrod;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Music Concert Ticket Booking</h1>
+        <div class="form-group">
+            <label for="cityInput">Enter city name:</label>
+            <input type="text" id="cityInput" class="form-control" placeholder="City">
+        </div>
+        <button id="checkWeatherBtn" class="btn btn-primary">Check Weather</button>
+        <p id="weatherResult" class="mt-3"></p>
+        <hr>
+        <h2>Music Concert Details</h2>
+        <p>City: Kerala</p>
+        <p>Date: 10/10/2023</p>
+        <p>Location:  The Marina Trench</p>
+        <p>Time: 06.30 PM Onwards</p>
+        <p>Price: 850</p>
+        <p>description: The Eagle is Coming !</p>
+        <button id="bookTicketBtn" class="btn btn-success">Book Tickets</button>
+        <p id="ticketResult" class="mt-3"></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const checkWeatherBtn = document.getElementById("checkWeatherBtn");
+            const cityInput = document.getElementById("cityInput");
+            const weatherResult = document.getElementById("weatherResult");
+            const bookTicketBtn = document.getElementById("bookTicketBtn");
+            const ticketResult = document.getElementById("ticketResult");
+
+            checkWeatherBtn.addEventListener("click", async () => {
+                const city = cityInput.value;
+                if (city === "") {
+                    weatherResult.innerText = "Please enter a city name.";
+                    return;
+                }
+
+                try {
+                    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=79e244e4fc4f15387cc576db5a59ee16&units=metric`);
+                    const data = await response.json();
+                    const weather = data.weather[0].main;
+
+                    if (weather === "Rain") {
+                        weatherResult.innerText = "Weather is bad. Tickets not booked.";
+                    } else if (weather === "Clear" || weather === "Clouds") {
+                        weatherResult.innerText = "Weather is pleasant. You can book tickets.";
+                    } else {
+                        weatherResult.innerText = "Weather condition unknown. Proceed with caution.";
+                             
+                    }
+                } catch (error) {
+                    weatherResult.innerText = "Error fetching weather data.";
+                }
+            });
+
+            bookTicketBtn.addEventListener("click", () => {
+                const weather = weatherResult.innerText;
+                if (weather.includes("bad")) {
+                    ticketResult.innerText = "Tickets not booked due to bad weather.";
+                    window.location.href="home.html";
+                } else if (weather.includes("pleasant")) {
+                    ticketResult.innerText = "Tickets booked successfully!";
+                    window.location.href="Ani ticket.html";
+                } else {
+                    alert (ticketResult.innerText = "unknown weather condition,  If you Still want to Book 'CLICK OK'" )
+                    window.location.href="Ani ticket.html";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

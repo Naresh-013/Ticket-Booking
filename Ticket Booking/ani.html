@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ANI</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(band);
+  }
+  
+  header {
+    background-color: #333;
+    color: goldenrod;
+    padding: 10px;
+    text-align: center;
+  }
+  img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+  
+  h1 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: goldenrod;
+    text-decoration: underline;
+  }
+  h2{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: goldenrod;
+    text-decoration: underline;
+  }
+  p{
+    text-align: center;
+    color: goldenrod;
+  }
+
+  div.container {
+  text-align: center;
+  color: goldenrod;
+}
+
+ul.myUL {
+  display: inline-block;
+  text-align: left;
+}
+  
+  main {
+    padding: 20px;
+    color: goldenrod;
+  }
+  
+  .concert-info {
+    margin-bottom: 20px;
+    text-align: center;
+    color: goldenrod;
+  }
+  
+  .concert-info p {
+    margin-bottom: 10px;
+    color: goldenrod;
+  }
+ .center {
+  		display: flex;
+		justify-content: center;
+		align-items: center;
+   
+	}
+
+  .ticket-form input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+    }
+    
+  
+  
+  .ticket-form {
+      margin-top: 20px;
+      padding: 10px;
+    }
+    
+    .ticket-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .ticket-form input[type="number"] {
+      width: 10%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    
+   .error {
+      color: #ff0000;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  footer {
+      background-color: #333;
+      color:goldenrod;
+      padding: 10px;
+      text-align: center;
+    }
+</style>
+</head>
+<body>
+  <h1>Anirudh Ravichander</h1>
+  <img src="ani1.jpg" alt="Concert Artist" >
+  
+  <h2>About</h2>
+  <p>This is a brief description of about Anirudh Ravichander and his musical style.</p>
+  <div class="container">
+  <h2>Listen To Some Popular Albums Of Anirudh</h2>
+  <h2>ON</h2>
+  <img src="spotify">
+  <ul class="myUL">
+    <li>Album 1 (3(2012) )</li>
+    <li><a href="https://open.spotify.com/playlist/1gEAq0bx2i1LcvZrinhkHV?si=aa6529e392d24f5f">Listen to Album of 3</a></li><br/>
+    <li>Album 2 (Naanum Rowdy Than(2015) )</li>
+    <li><a href="https://open.spotify.com/album/3I5PzaYN72LH0ryThDIxLa?si=8XRlz0-JQ0-_7ODzrapcBQ">Listen to Album of Naanum Rowdy Than</a></li><br/>
+    <li>Album 3 (Petta(2019) )</li>
+    <li><a href="https://open.spotify.com/album/3NAMtgP845mM6cJjYDYy1g?si=NottvW0TRciq-NRnJHKH3w">Listen to Album of Petta</a></li><br/>
+  </ul>
+  
+  <h2>Upcoming Performances</h2>
+  <main>
+    <div class="concert-info">
+      <h2>Anirudh</h2>
+      <p>City: Kerala</p>
+      <p>Date: 10/10/2023</p>
+      <p>Location:  The Marina Trench</p>
+      <p>Time: 06.30 PM Onwards</p>
+      <p>Price: 850</p>
+      <p>description: The Eagle is Coming !</p>
+    </div><br/><br/>
+
+
+    <div class="center">
+      <button onclick="window.location.href='Ani weather.html'">BOOK NOW</button>
+
+    </div>
+  </main>
+   
+  <footer>
+    &copy; 2023 Concert Ticket Booking. All rights reserved.
+  </footer>
+  
+  
+  <script>
+    var bookingForm = document.getElementById("booking-form");
+    var errorMessage = document.getElementById("error-message");
+    
+    bookingForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      var quantity = parseInt(document.getElementById("quantity").value);
+      
+      if (quantity > 5) {
+        errorMessage.textContent = "You can book a maximum of 5 tickets.";
+      } else {
+        errorMessage.textContent = "";
+        // Proceed with ticket booking logic here
+        alert("Tickets booked successfully!");
+      }
+    });
+  </script>
+</body>
+</html>

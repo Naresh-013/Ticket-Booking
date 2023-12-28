@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GV</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(band);
+  }
+  
+  header {
+    background-color: #333;
+    color: goldenrod;
+    padding: 10px;
+    text-align: center;
+  }
+  img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+  
+  h1 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: goldenrod;
+    text-decoration: underline;
+  }
+  h2{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: goldenrod;
+    text-decoration: underline;
+  }
+  p{
+    text-align: center;
+    color: goldenrod;
+  }
+
+  div.container {
+  text-align: center;
+  color: goldenrod;
+}
+
+ul.myUL {
+  display: inline-block;
+  text-align: left;
+}
+  
+  main {
+    padding: 20px;
+    color: goldenrod;
+  }
+  
+  .concert-info {
+    margin-bottom: 20px;
+    text-align: center;
+    color: goldenrod;
+  }
+  
+  .concert-info p {
+    margin-bottom: 10px;
+    color: goldenrod;
+  }
+ .center {
+  				display: flex;
+				justify-content: center;
+				align-items: center;
+   
+	}
+
+  .ticket-form input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+    }
+    
+  
+  
+  .ticket-form {
+      margin-top: 20px;
+      padding: 10px;
+    }
+    
+    .ticket-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .ticket-form input[type="number"] {
+      width: 10%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    
+   .error {
+      color: #ff0000;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  footer {
+      background-color: #333;
+      color:goldenrod;
+      padding: 10px;
+      text-align: center;
+    }
+</style>
+</head>
+<body>
+  <h1>GV Prakash Kumar</h1>
+  <img src="prakash.jpg" alt="Concert Artist" >
+  
+  <h2>About</h2>
+  <p>This is a brief description of about GV Prakash Kumar and his musical style.</p>
+  <div class="container">
+  <h2>Listen To Some Popular Albums Of GV Prakash Kumar</h2>
+  <h2>ON</h2>
+  <img src="spotify">
+  <ul class="myUL">
+    <li>Album 1 (Veyil(2006))</li>
+    <li><a href="https://open.spotify.com/album/7htdxYpZAiLLONBAVJs44x?si=fr7BxalfSLal93ua3QNBhg">Listen to Album of Veyil</a></li><br/>
+    <li>Album 2 (Aadukalam(2011))</li>
+    <li><a href="https://open.spotify.com/album/0czPRsN8uZZ5o3J8usUHbR?si=AMzhDndcTDevMcj1_tzztA">Listen to Album of Aadukalam</a></li><br/>
+    <li>Album 3 (Theri(2016))</li>
+    <li><a href="https://open.spotify.com/album/57PZ81n80Hwh4fNLdsx7vp?si=1LlUiaDyR8CUktX0t42YoA">Listen to Album of Theri</a></li><br/>
+  </ul>
+  
+  <h2>Upcoming Performances</h2>
+  <main>
+    <div class="concert-info">
+      <h2>GV</h2>
+      <p>Date: 23/10/2023</p>
+      <p>City: Coimbatore</p>
+      <p>Location:  The High Mount</p>
+      <p>Time: 06.30 PM Onwards</p>
+      <p>Price: 650</p>
+      <p>description: A Storm in The Night !</p>
+    </div>
+
+    <div class="center">
+      <button onclick="window.location.href='GV weather.html'">BOOK NOW</button>
+
+    </div>
+  </main>
+   
+  <footer>
+    &copy; 2023 Concert Ticket Booking. All rights reserved.
+  </footer>
+  
+  
+  <script>
+    var bookingForm = document.getElementById("booking-form");
+    var errorMessage = document.getElementById("error-message");
+    
+    bookingForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      var quantity = parseInt(document.getElementById("quantity").value);
+      
+      if (quantity > 5) {
+        errorMessage.textContent = "You can book a maximum of 5 tickets.";
+      } else {
+        errorMessage.textContent = "";
+        // Proceed with ticket booking logic here
+        alert("Tickets booked successfully!");
+      }
+    });
+  </script>
+</body>
+</html>

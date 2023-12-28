@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Entertainment.Help</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{
+				background-image: url("concert");			
+			}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px blueviolet;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color:black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:black;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: red;
+  padding: 10px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+<script>
+  function help()
+                {alert ("your query has registered sussccesfully"); }
+</script>
+</head>
+<body>
+
+<h2>Help Section</h2>
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>For Queries And Help</h2>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="logo.png" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="State">State</label>
+        <select id="State" name="State">
+          <option value="Delhi">Delhi</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Banglore">Banglore</option>
+        </select>
+        <label for="quey">Your Query for concert</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <button type="submit" onclick="help()"><a href="query.html">submit</a></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

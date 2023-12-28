@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AR RAHMAN</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(band);
+  }
+  
+  header {
+    background-color: #333;
+    color: goldenrod;
+    padding: 10px;
+    text-align: center;
+  }
+  img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+  
+  h1 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: goldenrod;
+    text-decoration: underline;
+  }
+  h2{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: goldenrod;
+    text-decoration: underline;
+  }
+  p{
+    text-align: center;
+    color: goldenrod;
+  }
+
+  div.container {
+  text-align: center;
+  color: goldenrod;
+}
+
+ul.myUL {
+  display: inline-block;
+  text-align: left;
+}
+  
+  main {
+    padding: 20px;
+    color: goldenrod;
+  }
+  
+  .concert-info {
+    margin-bottom: 20px;
+    text-align: center;
+    color: goldenrod;
+  }
+  
+  .concert-info p {
+    margin-bottom: 10px;
+    color: goldenrod;
+  }
+ .center {
+  				display: flex;
+				justify-content: center;
+				align-items: center;
+   
+	}
+
+  .ticket-form input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+    }
+    
+  
+  
+  .ticket-form {
+      margin-top: 20px;
+      padding: 10px;
+    }
+    
+    .ticket-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .ticket-form input[type="number"] {
+      width: 10%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    
+   .error {
+      color: #ff0000;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  footer {
+      background-color: #333;
+      color:goldenrod;
+      padding: 10px;
+      text-align: center;
+    }
+</style>
+</head>
+<body>
+  <h1>AR RAHMAN</h1>
+  <img src="ARR" alt="Concert Artist" >
+  
+  <h2>About</h2>
+  <p>This is a brief description of about AR RAHMAN and his musical style.</p>
+  <div class="container">
+  <h2>Listen To Some Popular Albums Of AR RAHMAN</h2>
+  <h2>ON</h2>
+  <img src="spotify">
+  <ul class="myUL">
+    <li>Album 1 ( Roja (1992))</li>
+    <li><a href="https://open.spotify.com/album/2lORIs7BAIYVH7xxcXsUn7?si=OAAoFbeYThm4epZRd1dx9Q">Listen to Album of Roja</a></li><br/>
+    <li>Album 2 ( Dil Se (1998))</li>
+    <li><a href="https://open.spotify.com/album/54NUwj7U1MOhA1ZGbnhiMz?si=E1dr6bHuSeO-W9SvYPJZvw">Listen to Album of Dil Se</a></li><br/>
+    <li>Album 3 ( Rockstar (2011))</li>
+    <li><a href="https://open.spotify.com/album/3RZxrS2dDZlbsYtMRM89v8?si=SYsXIscJSFmA1g2LLfbc_g">Listen to Album of Rockstar</a></li><br/>
+  </ul>
+  
+  <h2>Upcoming Performances</h2>
+  <main>
+    <div class="concert-info">
+      <h2>ARR</h2>
+      <p>Date: 12/12/2023</p>
+      <p>City: Mumbai</p>
+      <p>Location:  The Seva Sadan Stadium</p>
+      <p>Time: 06.30 PM Onwards</p>
+      <p>Price: 950</p>
+      <p>description: A Night To Never Miss!</p>
+    </div><br/><br/>
+
+    <div class="center">
+      <button onclick="window.location.href='ARR weather.html'">BOOK NOW</button>
+
+    </div>
+  </main>
+   
+  <footer>
+    &copy; 2023 Concert Ticket Booking. All rights reserved.
+  </footer>
+  
+  
+  <script>
+    var bookingForm = document.getElementById("booking-form");
+    var errorMessage = document.getElementById("error-message");
+    
+    bookingForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      var quantity = parseInt(document.getElementById("quantity").value);
+      
+      if (quantity > 5) {
+        errorMessage.textContent = "You can book a maximum of 5 tickets.";
+      } else {
+        errorMessage.textContent = "";
+        // Proceed with ticket booking logic here
+        alert("Tickets booked successfully!");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Entertainment Payment</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Book Your Tickets!</h1><br/>
+  
+  <form id="paymentForm">
+    <div class="form-group">
+      <label for="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" name="cardNumber" required>
+    </div><br/><br/>
+    <div class="form-group">
+      <label for="cardName">Cardholder Name</label>
+      <input type="text" id="cardName" name="cardName" required>
+    </div><br/><br/>
+    <div class="form-group">
+      <label for="expiryDate">Expiry Date</label>
+      <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
+    </div><br/><br/>
+    <div class="form-group">
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" required>
+    </div><br/><br/>
+    <button type="submit">Pay Now</button>
+  </form>
+
+  <script src="script.js"></script>
+</body><br/>
+<footer>
+  &copy; 2023 Entertainment Ticket Booking. All rights reserved
+</html>

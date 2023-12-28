@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<title>Entertainment.Prime</title>
+		<style>
+			body{
+				  background-image: url(stage.avif);
+				  height: 100%; 
+				  background-position: center;
+ 				  background-repeat: no-repeat;
+ 				  background-size: cover;
+				}		
+				#video-container {
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: -1;
+					overflow: hidden;
+				}
+				#background-video {
+					width: 100%;
+					height: auto;
+					object-fit: cover;
+				}
+			
+			h1 {text-align: center;}
+			p {text-align: center;}
+			div {text-align: center;}
+			#content {
+					position: relative;
+					z-index: 1;
+					text-align: center;
+					padding: 100px;
+					color: white;
+					transition: margin-right;
+				}
+				
+				.center {
+  				display: flex;
+				justify-content: center;
+				align-items: center;
+   
+			}
+			button {
+  				background-color: #4CAF50; /* Green */
+  				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+			}
+		 	
+    </style>
+	</head>
+	<body>
+		<header>
+		<div class="content">
+			<h1><br/><br/><br/>
+			<p style="color:goldenrod;">Entertainment.Prime</P>
+			<p style="color:goldenrod;">Browse for live concerts</p>
+			<p style="color:goldenrod;">Info about the concert</p>
+			<p style="color:goldenrod;">Book your tickets</p>
+			</h1>
+		</div>
+	</header>
+	<div class="center">
+		<button class="cta-button"><a href="home.html">Get Started</a></button>
+	  </div>
+	</body>
+</html>
